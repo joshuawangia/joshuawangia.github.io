@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://joshuawangia.github.io/sitemap.xml
