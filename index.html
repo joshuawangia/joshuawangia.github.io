@@ -76,6 +76,17 @@ blockquote{margin:16px 0;padding-left:16px;border-left:1px solid var(--rule);col
 .works{padding:0}
 .works .label{display:block}
 h2.first{margin-top:8px}
+.btns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:16px 0 8px}
+.btn{display:block;padding:18px 20px;background:var(--tile);border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:4px;color:var(--fg);text-decoration:none;transition:background .15s,border-color .15s,transform .15s}
+.btn:hover,.btn:focus-visible{background:#eceae5;border-color:var(--accent);transform:translateY(-1px)}
+.btn .label{display:block;margin-bottom:4px}
+.btn .t{display:block;font-size:20px;line-height:1.3}
+.btn.wide{grid-column:1/-1}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary .label{color:rgba(255,255,255,.75)}
+.btn.primary .t{font-size:24px}
+.btn.primary:hover,.btn.primary:focus-visible{background:#4d5f95}
+@media (max-width:520px){.btns{grid-template-columns:1fr}}
 footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--rule);text-transform:none;letter-spacing:0}
 </style>
 </head>
@@ -86,11 +97,15 @@ footer{margin-top:56px;padding-top:16px;border-top:1px solid var(--rule);text-tr
 <p class="pron">pan&middot;civ&middot;ism, noun. From Greek <i>pan</i> (all) and Latin <i>civis</i> (citizen). One who holds it is a <b>Pancivist</b>.</p>
 
 <h2 class="first">Papers and writing</h2>
-<ul class="works">
-<li><span class="label">Paper &middot; 2026</span><a href="https://philpapers.org/rec/WANPAP-5">Powers and Principalities: A Death to Nationalism</a> &middot; <a href="https://philpapers.org/archive/WANPAP-5.pdf">PDF</a> &middot; <a href="https://philarchive.org/rec/WANPAP-5">PhilArchive</a></li>
-<li><span class="label">Substack &middot; Oct 2026</span><a href="https://joshuawangia.substack.com/p/you-ought-to-care-about-people">You Ought to Care About People</a></li>
-<li><span class="label">Substack &middot; Sep 2026</span><a href="https://joshuawangia.substack.com/p/pancivism-introduction">Pancivism: an introduction</a></li>
-</ul>
+<div class="btns">
+<a class="btn wide primary" href="https://philpapers.org/rec/WANPAP-5"><span class="label">Paper &middot; 2026 &middot; PhilPapers</span><span class="t">Powers and Principalities: A Death to Nationalism</span></a>
+<a class="btn" href="https://philpapers.org/archive/WANPAP-5.pdf"><span class="label">Paper</span><span class="t">Read the PDF</span></a>
+<a class="btn" href="https://philarchive.org/rec/WANPAP-5"><span class="label">Paper</span><span class="t">PhilArchive</span></a>
+<a class="btn" href="https://joshuawangia.substack.com/p/pancivism-introduction"><span class="label">Substack &middot; Sep 2026</span><span class="t">Pancivism: an introduction</span></a>
+<a class="btn" href="https://joshuawangia.substack.com/p/you-ought-to-care-about-people"><span class="label">Substack &middot; Oct 2026</span><span class="t">You Ought to Care About People</span></a>
+<a class="btn" href="https://joshuawangia.substack.com/"><span class="label">Profile</span><span class="t">Substack</span></a>
+<a class="btn" href="https://philpeople.org/profiles/joshua-luyali-wangia"><span class="label">Profile</span><span class="t">PhilPeople</span></a>
+</div>
 
 <h2>Definition</h2>
 
