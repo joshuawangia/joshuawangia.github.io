@@ -82,7 +82,8 @@ h2.cur::before{background:var(--accent)}
 .window{position:relative;overflow:hidden;aspect-ratio:16/9;background:var(--deep);margin:56px 0 0}
 .window.sq{aspect-ratio:1/1;max-width:420px;margin-inline:auto}
 .window.tall{aspect-ratio:3/4;max-width:360px;margin-inline:auto}
-.window>img{position:absolute;left:0;top:-10%;width:100%;height:120%;object-fit:cover;display:block}
+.window>img,.window>canvas{position:absolute;left:0;top:-10%;width:100%;height:120%;object-fit:cover;display:block}
+.window>canvas{cursor:grab;touch-action:pan-y}.window>canvas.grab{cursor:grabbing}
 .window::after{content:"";position:absolute;inset:0;box-shadow:var(--cut);pointer-events:none}
 figcaption{font-size:14px;font-style:italic;color:var(--fg3);text-align:center;margin-top:14px}
 figure{margin:0}
@@ -135,7 +136,7 @@ ul.not li::before{content:"";position:absolute;left:0;top:1.05em;width:10px;heig
 @keyframes behind{from{transform:translateY(-8%)}to{transform:translateY(8%)}}
 @supports (animation-timeline:view()){@media (prefers-reduced-motion:no-preference){
 h2,.lead,.links li,.def,blockquote,.spine li,.row,.node,ul.not li,.about p{animation:unfold linear both;animation-timeline:view();animation-range:entry 0% entry 100%}
-.window>img{animation:behind linear both;animation-timeline:view();animation-range:cover 0% cover 100%}}}
+.window>img,.window>canvas{animation:behind linear both;animation-timeline:view();animation-range:cover 0% cover 100%}}}
 </style>
 </head>
 <body>
@@ -184,7 +185,7 @@ h2,.lead,.links li,.def,blockquote,.spine li,.row,.node,ul.not li,.about p{anima
 <div class="row"><div class="node prem"><span class="lbl">Premise</span>National belonging is arbitrary relative to protecting a life</div><div class="node prem"><span class="lbl">Premise</span>Egalitarians reject criteria that are arbitrary to the good at stake</div></div>
 </div>
 
-<figure><div class="window sq"><img src="assets/globe-africa.jpg" alt="Globe centered on Africa" width="1200" height="1200"></div><figcaption>One connected moral space</figcaption></figure>
+<figure><div class="window sq" data-globe><img src="assets/globe-africa.jpg" alt="Globe centered on Africa" width="1200" height="1200"></div><figcaption>One connected moral space. Drag to turn it.</figcaption></figure>
 
 <h2>What Pancivism is not</h2>
 <ul class="not">
@@ -202,5 +203,6 @@ h2,.lead,.links li,.def,blockquote,.spine li,.row,.node,ul.not li,.about p{anima
 
 <footer class="site-foot">Joshua Luyali Wangia &middot; University of Pennsylvania &middot; <a href="https://joshuawangia.substack.com/">Substack</a> &middot; <a href="https://philpeople.org/profiles/joshua-luyali-wangia">PhilPeople</a> &middot; <a href="https://github.com/joshuawangia">GitHub</a></footer>
 </main>
+<script src="assets/globe.js" defer></script>
 </body>
 </html>
